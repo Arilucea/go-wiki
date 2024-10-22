@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/trietmn/go-wiki"
-	"github.com/trietmn/go-wiki/utils"
+	gowiki "github.com/Arilucea/go-wiki"
+	"github.com/Arilucea/go-wiki/utils"
 )
 
 // Test the Geosearch function

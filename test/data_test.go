@@ -8,8 +8,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/trietmn/go-wiki/models"
-	"github.com/trietmn/go-wiki/utils"
+	"github.com/Arilucea/go-wiki/models"
+	"github.com/Arilucea/go-wiki/utils"
 )
 
 const (

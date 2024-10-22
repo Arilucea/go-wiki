@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/trietmn/go-wiki/cache"
-	"github.com/trietmn/go-wiki/models"
+	"github.com/Arilucea/go-wiki/cache"
+	"github.com/Arilucea/go-wiki/models"
 )
 
 const (

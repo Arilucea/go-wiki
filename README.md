@@ -2,9 +2,7 @@
 
 <img align="right" width="159px" src="https://upload.wikimedia.org/wikipedia/en/8/80/Wikipedia-logo-v2.svg">
 
-[![go report card](https://goreportcard.com/badge/github.com/trietmn/go-wiki "go report card")](https://goreportcard.com/report/github.com/trietmn/go-wiki)
-[![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
-[![GoDoc](https://godoc.org/github.com/trietmn/go-wiki?status.svg)](https://pkg.go.dev/github.com/trietmn/go-wiki)
+Fork from <https://github.com/trietmn/go-wiki> adding functionality to use wikipedia backlinks api.
 
 This is a Golang Wikipedia API wrapper - The Golang module that makes it easy to access and parse data from Wikipedia. You can use this module to crawl data for your data warehouse or use it for your "Know-it-all" AI Chatbot.
 
@@ -30,18 +28,22 @@ This is a Golang Wikipedia API wrapper - The Golang module that makes it easy to
 ## Instalation
 
 To install Go-Wiki package, you need to install Go and set your Go workspace first.
+
 1. You first need [Go](https://golang.org/) installed, then you can use the below Go command to install Go-wiki.
+
 ```sh
-go get -u github.com/trietmn/go-wiki
+go get -u github.com/Arilucea/go-wiki
 ```
+
 2. Import it in your code.
+
 ```go
-import "github.com/trietmn/go-wiki"
+import "github.com/Arilucea/go-wiki"
 ```
 
 ## Documentation
 
-You can read the documentation at: <https://pkg.go.dev/github.com/trietmn/go-wiki> 
+You can read the documentation at: <https://pkg.go.dev/github.com/Arilucea/go-wiki>
 
 I will update a full tutorial article on some popular blog as soon as possiple.
 
@@ -57,7 +59,7 @@ package main
 
 import (
     "fmt"
-    "github.com/trietmn/go-wiki"
+    "github.com/Arilucea/go-wiki"
 )
 
 func main() {
@@ -90,9 +92,10 @@ $ go run example.go
 
 ## Functions Examples
 
-Note: The functions below are functions that you would usually use. Read the [document](https://pkg.go.dev/github.com/trietmn/go-wiki) to see all the functions.
+Note: The functions below are functions that you would usually use. Read the [document](https://pkg.go.dev/github.com/Arilucea/go-wiki) to see all the functions.
 
 ### 1. Search
+
 ```go
 search_result, suggestion, err := gowiki.Search("Why is the sky blue", 3, true)
 if err != nil {
@@ -103,6 +106,7 @@ fmt.Printf("Suggestion: %v\n", suggestion)
 ```
 
 ### 2. GetPage (There are multiple page methods in the [Wikipedia Page Methods](#wikipedia-page-methods))
+
 ```go
 page, err := gowiki.GetPage("Rafael Nadal", -1, false, true)
 if err != nil {
@@ -112,6 +116,7 @@ if err != nil {
 ```
 
 ### 3. Suggest
+
 ```go
 suggestion, err := gowiki.Suggest("nadal")
 if err != nil {
@@ -121,6 +126,7 @@ fmt.Printf("Suggestion: %v\n", suggestion)
 ```
 
 ### 4. Geosearch
+
 ```go
 res, err := gowiki.GeoSearch(40.67693, 117.23193, -1, "", -1)
 if err != nil {
@@ -130,6 +136,7 @@ fmt.Printf("Geosearch result: %v\n", res)
 ```
 
 ### 5. GetRandom
+
 ```go
 res, err := gowiki.GetRandom(5)
 if err != nil {
@@ -139,12 +146,23 @@ fmt.Printf("Random titles: %v\n", res)
 ```
 
 ### 6. Summary
+
 ```go
 res, err := gowiki.Summary("Rafael Nadal", 5, -1, false, true)
 if err != nil {
     fmt.Println(err)
 }
 fmt.Printf("Summary: %v\n", res)
+```
+
+### 7. Backlinks
+
+```go
+res, err := gowiki.GetBacklinks("Uruguay")
+if err != nil {
+    fmt.Println(err)
+}
+fmt.Printf("Backlinks: %v\n", res)
 ```
 
 ## Wikipedia Page Methods
@@ -177,3 +195,4 @@ Connect with me on Linkedin: <https://www.linkedin.com/in/triet-m-nguyen-a94b4b2
 
 - [Python Wikipedia](https://github.com/goldsmith/Wikipedia) by goldsmith as inspiration.
 - The [Wikimedia Foundation](https://wikimediafoundation.org/) for giving the world free access to data.
+- [Original library](https://github.com/trietmn/go-wiki) by trietmn

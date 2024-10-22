@@ -5,7 +5,7 @@ import (
 	"errors"
 	"time"
 
-	"github.com/trietmn/go-wiki/models"
+	"github.com/Arilucea/go-wiki/models"
 )
 
 var (

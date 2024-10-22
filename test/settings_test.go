@@ -3,9 +3,9 @@ package test
 import (
 	"testing"
 
-	"github.com/trietmn/go-wiki"
-	"github.com/trietmn/go-wiki/cache"
-	"github.com/trietmn/go-wiki/utils"
+	gowiki "github.com/Arilucea/go-wiki"
+	"github.com/Arilucea/go-wiki/cache"
+	"github.com/Arilucea/go-wiki/utils"
 )
 
 func TestSetLanguage(t *testing.T) {

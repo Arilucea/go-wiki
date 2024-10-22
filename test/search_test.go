@@ -1,9 +1,10 @@
 package test
 
 import (
-	"github.com/trietmn/go-wiki"
-	"github.com/trietmn/go-wiki/utils"
 	"testing"
+
+	gowiki "github.com/Arilucea/go-wiki"
+	"github.com/Arilucea/go-wiki/utils"
 )
 
 func TestSearch(t *testing.T) {

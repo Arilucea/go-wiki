@@ -2,11 +2,12 @@ package test
 
 import (
 	"errors"
-	"github.com/trietmn/go-wiki"
-	"github.com/trietmn/go-wiki/page"
-	"github.com/trietmn/go-wiki/utils"
 	"strconv"
 	"testing"
+
+	gowiki "github.com/Arilucea/go-wiki"
+	"github.com/Arilucea/go-wiki/page"
+	"github.com/Arilucea/go-wiki/utils"
 )
 
 var (
